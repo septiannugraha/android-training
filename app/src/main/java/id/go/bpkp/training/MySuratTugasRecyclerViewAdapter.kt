@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import android.widget.Toast
 
 
 import id.go.bpkp.training.SuratTugasFragment.OnListFragmentInteractionListener
@@ -17,7 +18,7 @@ import kotlinx.android.synthetic.main.fragment_surattugas.view.*
  * specified [OnListFragmentInteractionListener].
  * TODO: Replace the implementation with code for your data type.
  */
-class MySuratTugasRecyclerViewAdapter(
+class MySuratTugasRecyclerViewAdapter (
     private val mValues: List<DummyItem>,
     private val mListener: OnListFragmentInteractionListener?
 ) : RecyclerView.Adapter<MySuratTugasRecyclerViewAdapter.ViewHolder>() {
@@ -48,6 +49,10 @@ class MySuratTugasRecyclerViewAdapter(
             tag = item
             setOnClickListener(mOnClickListener)
         }
+
+//        holder.mContentView.setOnClickListener {
+//            Toast.makeText(holder.mView.context, item.details, Toast.LENGTH_SHORT).show()
+//        }
     }
 
     override fun getItemCount(): Int = mValues.size
