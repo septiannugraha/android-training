@@ -49,10 +49,6 @@ class MySuratTugasRecyclerViewAdapter (
             tag = item
             setOnClickListener(mOnClickListener)
         }
-
-//        holder.mContentView.setOnClickListener {
-//            Toast.makeText(holder.mView.context, item.details, Toast.LENGTH_SHORT).show()
-//        }
     }
 
     override fun getItemCount(): Int = mValues.size
